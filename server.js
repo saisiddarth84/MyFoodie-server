@@ -79,7 +79,7 @@ app.get('/api/cuisine', (req, res) => {
   const url = `https://www.swiggy.com/dapi/menu/v4/full?lat=${lat}&lng=${lng}&menuId=${menuId}`;
   */ 
 
-  const url = `https://www.instafood.onrender.com/api/restaurants/list/v5?lat=${lat}&lng=${lon}&collection=83637&tags=layout_CCS_${cuisineName}`;
+  const url = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${lat}&lng=${lon}&collection=83637&tags=layout_CCS_${cuisineName}`;
 
 
   fetch(url, {
