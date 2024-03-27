@@ -72,12 +72,9 @@ app.get('/api/menu', (req, res) => {
 
 
 app.get('/api/cuisine', (req, res) => {
-  const { lat, lng, restaurantId } = req.query;
+  const { lat, lng, cuisineName } = req.query;
   console.log(req.query);
 
-  /* OLD SWIGGY API
-  const url = `https://www.swiggy.com/dapi/menu/v4/full?lat=${lat}&lng=${lng}&menuId=${menuId}`;
-  */ 
 
   const url = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${lat}&lng=${lon}&collection=80416&tags=layout_CCS_${cuisineName}&sortBy=&filters=&type=rcv2&offset=0&page_type=null`;
 
