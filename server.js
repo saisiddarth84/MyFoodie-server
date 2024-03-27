@@ -72,11 +72,11 @@ app.get('/api/menu', (req, res) => {
 
 
 app.get('/api/cuisine', (req, res) => {
-  const { lat, lng, cuisineName } = req.query;
+  const { lat, lng, cuisineName, id } = req.query;
   console.log(req.query);
 
 
-  const url = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${lat}&lng=${lon}&collection=80416&tags=layout_CCS_${cuisineName}&sortBy=&filters=&type=rcv2&offset=0&page_type=null`;
+  const url = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${lat}&lng=${lon}&collection=${id}&tags=layout_CCS_${cuisineName}&sortBy=&filters=&type=rcv2&offset=0&page_type=null`;
 
 
   fetch(url, {
